@@ -1,6 +1,6 @@
-import React from 'react';
-import { UtensilsCrossed } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { UtensilsCrossed } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const PremiumFooter = () => (
   <footer className="relative border-t border-slate-200/50 bg-white dark:border-white/10 dark:bg-[#020617] overflow-hidden">
@@ -21,26 +21,88 @@ export const PremiumFooter = () => (
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Platform</h4>
+          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">
+            Platform
+          </h4>
           <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
-            <li><a href="#command-center" className="hover:text-electric-blue transition-colors">Command Center</a></li>
-            <li><a href="#ai-intelligence" className="hover:text-electric-blue transition-colors">AI Intelligence</a></li>
-            <li><a href="#pricing" className="hover:text-electric-blue transition-colors">Pricing</a></li>
+            <li>
+              <a
+                href="#command-center"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Command Center
+              </a>
+            </li>
+            <li>
+              <a
+                href="#ai-intelligence"
+                className="hover:text-electric-blue transition-colors"
+              >
+                AI Intelligence
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Pricing
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Company</h4>
+          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">
+            Company
+          </h4>
           <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
-            <li><a href="#" className="hover:text-electric-blue transition-colors">About Us</a></li>
-            <li><a href="#" className="hover:text-electric-blue transition-colors">Careers</a></li>
-            <li><a href="#" className="hover:text-electric-blue transition-colors">Contact</a></li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-electric-blue transition-colors"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Careers
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Legal</h4>
+          <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">
+            Legal
+          </h4>
           <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
-            <li><a href="#" className="hover:text-electric-blue transition-colors">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-electric-blue transition-colors">Terms of Service</a></li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-electric-blue transition-colors"
+              >
+                Terms of Service
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -50,7 +112,9 @@ export const PremiumFooter = () => (
         </p>
         <div className="flex gap-4">
           <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse mt-1.5"></span>
-          <span className="text-sm text-slate-500 dark:text-slate-500">All systems operational</span>
+          <span className="text-sm text-slate-500 dark:text-slate-500">
+            All systems operational
+          </span>
         </div>
       </div>
     </div>

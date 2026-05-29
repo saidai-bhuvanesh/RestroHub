@@ -22,12 +22,18 @@ export default {
         },
         electric: {
           blue: '#2563eb',
+          cyan: '#06b6d4',
+          purple: '#a855f7',
+          pink: '#ec4899',
+          orange: '#f97316',
         },
         royal: {
           blue: '#3b82f6',
         },
         cyber: {
           blue: '#60a5fa',
+          neon: '#00f7ff',
+          magenta: '#ff00ff',
         },
         dark: {
           navy: '#020617',
@@ -41,6 +47,9 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'shimmer-fast': 'shimmer 1.5s linear infinite',
         'blob': 'blob 7s infinite',
+        'aurora': 'aurora 15s linear infinite',
+        'marquee': 'marquee 20s linear infinite',
+        'border-spin': 'borderSpin 4s linear infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -53,7 +62,7 @@ export default {
         },
         pulseGlow: {
           '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
-          '50%': { opacity: '0.8', filter: 'brightness(1.2) drop-shadow(0 0 10px rgba(59,130,246,0.5))' },
+          '50%': { opacity: '0.8', filter: 'brightness(1.5) drop-shadow(0 0 20px rgba(6,182,212,0.8))' },
         },
         shimmer: {
           '0%': { backgroundPosition: '200% 0' },
@@ -61,13 +70,25 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-15px)' },
         },
         blob: {
           '0%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.2)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.8)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        },
+        aurora: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        borderSpin: {
+          '100%': { transform: 'rotate(360deg)' },
         }
       }
     },
