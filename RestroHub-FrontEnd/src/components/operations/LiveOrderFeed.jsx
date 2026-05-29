@@ -1,25 +1,20 @@
 import React from 'react';
 import { BaseRealtimeFeed } from '../analytics/BaseRealtimeFeed';
 import { timeAgo, getColorForStatus } from '../../utils/analytics/analyticsHelpers';
+import { liveOrderFeedMock } from '../../data/mock/analyticsData';
 
-const MOCK_INITIAL_ORDERS = [
-  { id: 'ORD-101', item: 'Spicy Veg Pizza, Garlic Bread', status: 'preparing', time: new Date(Date.now() - 300000).toISOString(), amount: 450 },
-  { id: 'ORD-102', item: 'Paneer Tikka Masala', status: 'pending', time: new Date(Date.now() - 60000).toISOString(), amount: 320 },
-];
-
-export const LiveOrderFeed = () => {
-  const fetchInitialData = async () => MOCK_INITIAL_ORDERS;
+export const LiveOrderFeed = React.memo(() => {
+  const fetchInitialData = async () => liveOrderFeedMock.slice(0, 2);
   
   const setupSubscription = (onNewItem) => {
+    let index = 2;
     const interval = setInterval(() => {
-      if (Math.random() > 0.7) {
-        onNewItem({
-          id: `ORD-${Math.floor(Math.random() * 900) + 100}`,
-          item: ['Margherita Pizza', 'Veg Burger', 'Pasta Alfredo', 'Cold Coffee'][Math.floor(Math.random() * 4)],
-          status: 'pending',
-          time: new Date().toISOString(),
-          amount: Math.floor(Math.random() * 500) + 100
-        });
+      if (index < liveOrderFeedMock.length) {
+        onNewItem(liveOrderFeedMock[index]);
+        index++;
+      } else {
+        // Loop back for infinite mock stream
+        index = 0;
       }
     }, 5000);
     return { unsubscribe: () => clearInterval(interval) };
@@ -50,4 +45,4 @@ export const LiveOrderFeed = () => {
       )}
     />
   );
-};
+});

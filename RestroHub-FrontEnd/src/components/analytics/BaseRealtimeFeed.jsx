@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { BaseAnalyticsCard } from './BaseAnalyticsCard';
 
 export const BaseRealtimeFeed = ({ title, fetchInitialData, setupSubscription, renderItem, maxItems = 10, emptyMessage = "No activity." }) => {
@@ -29,26 +28,21 @@ export const BaseRealtimeFeed = ({ title, fetchInitialData, setupSubscription, r
   }, [fetchInitialData, setupSubscription, maxItems]);
 
   return (
-    <BaseAnalyticsCard title={title} headerAction={<span className="flex h-3 w-3"><span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-emerald-400 opacity-75"></span><span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span></span>}>
-      <div className="space-y-3">
-        <AnimatePresence initial={false}>
+    <BaseAnalyticsCard title={title} headerAction={<span className="flex h-3 w-3" role="status" aria-label="Live updates active"><span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-emerald-400 opacity-75"></span><span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span></span>}>
+      <div className="space-y-3" role="feed" aria-live="polite">
           {items.length === 0 ? (
             <div className="text-sm text-gray-500 py-4 text-center">{emptyMessage}</div>
           ) : (
             items.map((item, index) => (
-              <motion.div
+              <div
                 key={item.id || index}
-                initial={{ opacity: 0, height: 0, scale: 0.95 }}
-                animate={{ opacity: 1, height: 'auto', scale: 1 }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.2 }}
-                layout
+                className="animate-fade-in-up will-change-transform"
+                role="article"
               >
                 {renderItem(item)}
-              </motion.div>
+              </div>
             ))
           )}
-        </AnimatePresence>
       </div>
     </BaseAnalyticsCard>
   );

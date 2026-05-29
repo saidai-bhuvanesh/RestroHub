@@ -11,7 +11,11 @@ export const BaseHeatmap = ({ title, data, rows, cols, xLabels = [], yLabels = [
 
   return (
     <BaseAnalyticsCard title={title}>
-      <div className="flex w-full overflow-x-auto pb-2">
+      <div 
+        role="region" 
+        aria-label={`${title} Data Grid`}
+        className="flex w-full overflow-x-auto pb-2"
+      >
         {/* Y Axis Labels */}
         <div className="flex flex-col justify-between pr-2 border-r border-gray-100" style={{ paddingTop: '24px' /* To align with cells, bypassing xLabels */ }}>
           {yLabels.map((lbl, i) => (
@@ -44,7 +48,9 @@ export const BaseHeatmap = ({ title, data, rows, cols, xLabels = [], yLabels = [
                   return (
                     <div 
                       key={`${x}-${y}`} 
-                      className="flex-1 rounded-sm transition-all hover:ring-2 ring-gray-900 cursor-pointer"
+                      role="gridcell"
+                      aria-label={`${xLabels[x]} - ${yLabels[y]}: ${val}`}
+                      className="flex-1 rounded-sm transition-all duration-300 hover:ring-2 ring-gray-900 cursor-pointer will-change-transform hover:-translate-y-0.5 hover:shadow-md"
                       style={{ backgroundColor: bgColor }}
                       title={`Value: ${val}`}
                     />
