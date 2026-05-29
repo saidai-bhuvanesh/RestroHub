@@ -30,6 +30,12 @@ import OperationsDashboard from '../pages/OperationsDashboard';
 import AnalyticsDashboard from '../pages/AnalyticsDashboard';
 import InventoryDashboard from '../pages/InventoryDashboard';
 import CustomerLoyaltyDashboard from '../pages/CustomerLoyaltyDashboard';
+import MultiBranchDashboard from '../pages/MultiBranchDashboard';
+import MenuIntelligenceDashboard from '../pages/MenuIntelligenceDashboard';
+import DeliveryPlatformDashboard from '../pages/DeliveryPlatformDashboard';
+import ReputationEngineDashboard from '../pages/ReputationEngineDashboard';
+import PaymentMonitoringDashboard from '../pages/PaymentMonitoringDashboard';
+import GrowthExpansionDashboard from '../pages/GrowthExpansionDashboard';
 
 const AppRoutes = () => {
   return (
@@ -62,6 +68,12 @@ const AppRoutes = () => {
         <Route path="analytics" element={<AnalyticsDashboard />} />
         <Route path="inventory" element={<InventoryDashboard />} />
         <Route path="customers" element={<CustomerLoyaltyDashboard />} />
+        <Route path="multi-branch" element={<MultiBranchDashboard />} />
+        <Route path="menu-intelligence" element={<MenuIntelligenceDashboard />} />
+        <Route path="delivery" element={<DeliveryPlatformDashboard />} />
+        <Route path="reputation" element={<ReputationEngineDashboard />} />
+        <Route path="payments" element={<PaymentMonitoringDashboard />} />
+        <Route path="growth" element={<GrowthExpansionDashboard />} />
         <Route path="menus" element={<Menus />} />
         <Route path="orders" element={<Orders />} />
         <Route path="store/branches" element={<Branches />} />

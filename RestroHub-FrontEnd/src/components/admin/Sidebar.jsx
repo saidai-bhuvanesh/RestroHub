@@ -18,6 +18,10 @@ import {
   LineChart,
   PackageSearch,
   Users,
+  BookOpen,
+  Truck,
+  Star,
+  TrendingUp,
 } from 'lucide-react';
 import { useAdminTheme } from '@context/AdminThemeContext';
 
@@ -69,6 +73,12 @@ const Sidebar = ({ open, setOpen, collapsed, setCollapsed }) => {
         { type: 'link', name: 'Analytics', path: '/admin/analytics', icon: LineChart },
         { type: 'link', name: 'Inventory', path: '/admin/inventory', icon: PackageSearch },
         { type: 'link', name: 'Customers', path: '/admin/customers', icon: Users },
+        { type: 'link', name: 'Branches', path: '/admin/multi-branch', icon: Building2 },
+        { type: 'link', name: 'Menu Intel', path: '/admin/menu-intelligence', icon: BookOpen },
+        { type: 'link', name: 'Delivery', path: '/admin/delivery', icon: Truck },
+        { type: 'link', name: 'Reputation', path: '/admin/reputation', icon: Star },
+        { type: 'link', name: 'Payments', path: '/admin/payments', icon: CreditCard },
+        { type: 'link', name: 'Growth', path: '/admin/growth', icon: TrendingUp },
         { type: 'link', name: 'Menus', path: '/admin/menus', icon: UtensilsCrossed },
         { type: 'link', name: 'Orders', path: '/admin/orders', icon: ShoppingCart },
       ],
