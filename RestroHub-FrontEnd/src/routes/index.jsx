@@ -29,6 +29,7 @@ import Profile from '@components/admin/profile/Profile';
 import OperationsDashboard from '../pages/OperationsDashboard';
 import AnalyticsDashboard from '../pages/AnalyticsDashboard';
 import InventoryDashboard from '../pages/InventoryDashboard';
+import CustomerLoyaltyDashboard from '../pages/CustomerLoyaltyDashboard';
 
 const AppRoutes = () => {
   return (
@@ -60,6 +61,7 @@ const AppRoutes = () => {
         <Route path="operations" element={<OperationsDashboard />} />
         <Route path="analytics" element={<AnalyticsDashboard />} />
         <Route path="inventory" element={<InventoryDashboard />} />
+        <Route path="customers" element={<CustomerLoyaltyDashboard />} />
         <Route path="menus" element={<Menus />} />
         <Route path="orders" element={<Orders />} />
         <Route path="store/branches" element={<Branches />} />
