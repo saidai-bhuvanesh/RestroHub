@@ -28,6 +28,7 @@ import UPILinks from '@components/admin/upi/UPILinks';
 import Profile from '@components/admin/profile/Profile';
 import OperationsDashboard from '../pages/OperationsDashboard';
 import AnalyticsDashboard from '../pages/AnalyticsDashboard';
+import InventoryDashboard from '../pages/InventoryDashboard';
 
 const AppRoutes = () => {
   return (
@@ -58,6 +59,7 @@ const AppRoutes = () => {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="operations" element={<OperationsDashboard />} />
         <Route path="analytics" element={<AnalyticsDashboard />} />
+        <Route path="inventory" element={<InventoryDashboard />} />
         <Route path="menus" element={<Menus />} />
         <Route path="orders" element={<Orders />} />
         <Route path="store/branches" element={<Branches />} />
