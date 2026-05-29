@@ -27,6 +27,7 @@ import QRDisplay from '@components/admin/marketing/qr/QRDisplay';
 import UPILinks from '@components/admin/upi/UPILinks';
 import Profile from '@components/admin/profile/Profile';
 import OperationsDashboard from '../pages/OperationsDashboard';
+import AnalyticsDashboard from '../pages/AnalyticsDashboard';
 
 const AppRoutes = () => {
   return (
@@ -56,6 +57,7 @@ const AppRoutes = () => {
         <Route index element={<Navigate to="/admin/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="operations" element={<OperationsDashboard />} />
+        <Route path="analytics" element={<AnalyticsDashboard />} />
         <Route path="menus" element={<Menus />} />
         <Route path="orders" element={<Orders />} />
         <Route path="store/branches" element={<Branches />} />

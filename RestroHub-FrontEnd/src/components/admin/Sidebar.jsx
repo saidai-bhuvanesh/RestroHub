@@ -15,6 +15,7 @@ import {
   ChevronsLeft,
   ChevronsRight,
   Activity,
+  LineChart,
 } from 'lucide-react';
 import { useAdminTheme } from '@context/AdminThemeContext';
 
@@ -63,6 +64,7 @@ const Sidebar = ({ open, setOpen, collapsed, setCollapsed }) => {
       items: [
         { type: 'link', name: 'Dashboard', path: '/admin/dashboard', icon: LayoutDashboard },
         { type: 'link', name: 'Operations', path: '/admin/operations', icon: Activity },
+        { type: 'link', name: 'Analytics', path: '/admin/analytics', icon: LineChart },
         { type: 'link', name: 'Menus', path: '/admin/menus', icon: UtensilsCrossed },
         { type: 'link', name: 'Orders', path: '/admin/orders', icon: ShoppingCart },
       ],
